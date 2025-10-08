@@ -1,0 +1,147 @@
+/* ========================================
+   Cognitoware Shared Stylesheet
+   Applies to all product pages and index.html
+   ======================================== */
+
+:root {
+  --text-color: #222;
+  --background: #fff;
+  --accent: #111;
+  --border-color: #ddd;
+  --border-light: #eee;
+  --muted-text: #666;
+  --max-width: 720px;
+  --font-body: system-ui, -apple-system, sans-serif;
+}
+
+/* Reset */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background: var(--background);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Layout Containers */
+header, section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+header {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-top: 0.75rem;
+}
+
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Product Cards */
+.products {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.product {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.product:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.product p {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* Buttons */
+.cta, .product a {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--background);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.cta a:hover,
+.product a:hover {
+  background: #333;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  border-top: 1px solid var(--border-light);
+}
+
+footer a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  header {
+    padding-top: 3rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  .product {
+    padding: 1.25rem;
+  }
+}
