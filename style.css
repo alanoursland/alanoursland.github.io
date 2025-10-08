@@ -148,3 +148,23 @@ footer a {
     padding: 1.25rem;
   }
 }
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
