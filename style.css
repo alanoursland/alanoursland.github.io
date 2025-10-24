@@ -92,7 +92,6 @@ a:hover {
 
 .product:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
 }
 
 .product p {
@@ -118,22 +117,7 @@ a:hover {
 .product a:hover {
   background-color: #333;   /* slightly lighter black */
   color: #fff;              /* stays white */
-  transform: translateY(-2px);
   text-decoration: none;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: var(--muted-text);
-  border-top: 1px solid var(--border-light);
-}
-
-footer a {
-  color: var(--accent);
-  font-weight: 600;
 }
 
 /* Responsive Adjustments */
@@ -149,22 +133,217 @@ footer a {
   }
 }
 
+/* ========================================
+   Cognitoware Shared Stylesheet
+   Applies to all product pages and index.html
+   ======================================== */
+
+:root {
+  --text-color: #222;
+  --background: #fff;
+  --accent: #111;
+  --border-color: #ddd;
+  --border-light: #eee;
+  --muted-text: #666;
+  --max-width: 720px;
+  --font-body: system-ui, -apple-system, sans-serif;
+}
+
+/* Reset */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background: var(--background);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Layout Containers */
+header, section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+header {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-top: 0.75rem;
+}
+
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Product Cards */
+.products {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.product {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.product:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.product p {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* Buttons */
+.cta a,
+.product a {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;              /* keep white text */
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cta a:hover,
+.product a:hover {
+  background-color: #333;   /* slightly lighter black */
+  color: #fff;              /* stays white */
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  header {
+    padding-top: 3rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  .product {
+    padding: 1.25rem;
+  }
+}
+
+/* Best skip-link pattern: invisible until focus */
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.6rem 0.9rem;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transform: translateY(-200%);   /* hidden */
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: none;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+/* Hide top nav visually but keep it accessible */
+.primary-nav {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 footer {
   text-align: center;
   margin-top: 3rem;
   padding: 1.5rem 0;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--border-light);
   font-size: 0.9rem;
-  color: #aaa;
+  color: #444; /* unified text + link color */
+  background: #fff;
+}
+
+footer .legal {
+  color: inherit;            /* same as footer text (#444) */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 footer a {
-  color: #ccc;
+  color: inherit;            /* same as footer text (#444) */
+  font-weight: 500;
   text-decoration: none;
   margin: 0 0.3rem;
 }
 
-footer a:hover {
-  color: #fff;
+footer a:hover,
+footer a:focus-visible {
   text-decoration: underline;
+  color: #000;               /* slightly darker on hover for clarity */
 }
