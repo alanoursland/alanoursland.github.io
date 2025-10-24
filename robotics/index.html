@@ -1,64 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cognitoware — Independent Software Studio</title>
-  <meta name="description" content="Cognitoware LLC is an independent software studio building focused, data-driven iOS apps and an open-source robotics library." />
-  <link rel="stylesheet" href="/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cognitoware Robotics — Probabilistic Robotics Library</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+        <h1>Cognitoware Robotics</h1>
+        <p>An open-source C++ library for probabilistic robotics and state estimation.</p>
+        <div class="cta">
+            <a href="https://github.com/cognitoware/robotics">View on GitHub</a>
+        </div>
+    </header>
 
-  <header role="banner">
-    <h1 id="site-title">Cognitoware</h1>
-    <p>Independent software studio creating focused, data-driven tools.</p>
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
-  </header>
+    <section>
+        <h2>Overview</h2>
+        <p><strong>Cognitoware Robotics</strong> implements the core algorithms of probabilistic robotics—state
+            estimation, filtering, and stochastic modeling—in modern C++. It is inspired by Sebastian Thrun’s
+            <em>Probabilistic Robotics</em> and designed for clarity, correctness, and experimentation.</p>
 
-  <main id="main" tabindex="-1">
-    <section aria-labelledby="products">
-      <h2 id="products">Products</h2>
+        <h2>Core Modules</h2>
+        <ul>
+            <li><strong>State Estimation:</strong> Extended, Unscented, and Information Filters; Gaussian and linear
+                models.</li>
+            <li><strong>Probabilistic Math:</strong> Continuous and discrete distributions, conditional maps, Markov and
+                Bayes models.</li>
+            <li><strong>Mathematical Foundations:</strong> Lightweight matrix and vector utilities with complete unit
+                tests.</li>
+            <li><strong>Examples:</strong> Localization, sensor fusion, and estimation demos illustrating each
+                algorithm.</li>
+        </ul>
 
-      <div class="products" role="list">
-        <article class="product" role="listitem">
-          <h3>Beam Workout Tracker</h3>
-          <p>Fast, simple, and built for your workouts — not for data entry. A clean iOS app designed around ease of use during training.</p>
-          <p><a href="/beam/">Learn more about Beam Workout Tracker</a></p>
-        </article>
+        <h2>Design Goals</h2>
+        <ul>
+            <li>Clean — readable C++ mirroring the underlying equations</li>
+            <li>Lightweight — minimal dependencies and easy builds</li>
+            <li>Tested — validated through examples and unit tests</li>
+            <li>Extensible — a foundation for teaching, research, or new robotics projects</li>
+        </ul>
 
-        <article class="product" role="listitem">
-          <h3>Cognitoware Robotics</h3>
-          <p>An open-source C++ library for probabilistic robotics and state estimation — clear, tested, and research-grade foundations for autonomous systems.</p>
-          <p><a href="/robotics/">Explore the Cognitoware Robotics library</a></p>
-        </article>
-      </div>
+        <h2>Why It Exists</h2>
+        <p>Most robotics frameworks bury probabilistic logic under middleware and hardware drivers. Cognitoware Robotics
+            stays close to the math, making the principles of estimation and uncertainty accessible and reusable across
+            domains—from robotics to perception and autonomous systems.</p>
+
+        <div class="cta">
+            <a href="/">Back to Cognitoware</a>
+        </div>
     </section>
 
-    <section aria-labelledby="about">
-      <h2 id="about">About</h2>
-      <p><strong>Cognitoware LLC</strong> is a small software studio based in Washington State. Our work focuses on clarity, data integrity, and long-term design. Each project begins with a solid technical foundation and grows carefully from there.</p>
-      <p>We believe software should be simple, local-first, and honest about what it does.</p>
-
-      <address style="margin-top:2rem;">
-        <a href="mailto:info@cognitoware.com" aria-label="Email Cognitoware">info@cognitoware.com</a>
-      </address>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <p>&copy; 2025 Cognitoware LLC · All rights reserved.</p>
-    <ul>
-      <li><a href="/privacy/">Privacy Policy</a></li>
-      <li><a href="/terms/">Terms of Service</a></li>
-      <li><a href="/accessibility/">Accessibility Statement</a></li>
-    </ul>
-    <p>Apple, iPhone, and App Store are trademarks of Apple Inc.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Cognitoware LLC</p>
+        <p><a href="mailto:robotics-feedback@cognitoware.com">robotics-feedback@cognitoware.com</a></p>
+    </footer>
 </body>
+
 </html>
