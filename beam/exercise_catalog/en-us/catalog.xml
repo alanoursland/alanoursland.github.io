@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Schema version of the catalog = 1 -->
+<catalog version="1"
+         updated="2025-10-26T00:00:00Z"
+         defaultPackId="starter"
+         xml:lang="en-US">
+
+  <!-- Starter pack (CSV). HTTPS required; use en-us path for clarity -->
+  <pack id="starter"
+        format="csv"
+        url="https://cognitoware.com/imports/exercises/en-us/starter.csv"
+        name="Starter Pack"
+        description="Common gym basics to get started."
+        version="1.1"
+        fileSize="18423"
+        sha256="4d3c8b1c6f1e0dfd9b86c7e0d3a74fc9e2b3b75b2f0c3ce7c2b1d3a6e5f9c1a2"
+        minAppVersion="1.0.0"
+        tags="beginner,general"
+        hidden="false"/>
+
+</catalog>
